@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/movies/presentation/screens/home_screen.dart';
+import 'features/movies/presentation/screens/movies_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const MoviesScreen(),
     );
   }
 }
