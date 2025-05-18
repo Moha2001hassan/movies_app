@@ -1,11 +1,6 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../data/datasources/movie_remote_data.dart';
-import '../../data/repositories/movie_repo_impl.dart';
-import '../../domain/usecases/get_popular_movies.dart';
-import '../../domain/usecases/get_toprated_movies.dart';
-import '../../domain/usecases/get_upcoming_movies.dart';
+import '../../../../core/di/service_locator.dart';
 import '../cubit/movie_cubit.dart';
 import '../cubit/movie_state.dart';
 import '../widgets/movie_card.dart';
@@ -25,12 +20,7 @@ class _MoviesScreenState extends State<MoviesScreen> {
   @override
   void initState() {
     super.initState();
-    final movieRepo = MovieRepositoryImpl(MovieRemoteDataSource(Dio()));
-    _movieCubit = MovieCubit(
-      GetPopularMovies(movieRepo),
-      GetTopRatedMovies(movieRepo),
-      GetUpcomingMovies(movieRepo),
-    );
+    _movieCubit = sl<MovieCubit>();
     _fetchMovies();
   }
 

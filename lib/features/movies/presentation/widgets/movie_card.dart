@@ -28,6 +28,13 @@ class MovieCard extends StatelessWidget {
                     fit: BoxFit.cover,
                     width: 140,
                     height: 120,
+                    errorBuilder: (context, error, stackTrace) {
+                      return const Icon(
+                        Icons.image,
+                        color: Colors.red,
+                        size: 50,
+                      );
+                    },
                   ),
                 ),
                 Expanded(
