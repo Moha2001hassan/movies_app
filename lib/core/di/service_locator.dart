@@ -23,11 +23,11 @@ void setupLocator() {
   sl.registerLazySingleton<MovieRepository>(() => MovieRepositoryImpl(sl<MovieRemoteDataSource>()));
 
   // Use Cases
-  sl.registerLazySingleton(() => GetPopularMovies(sl()));
-  sl.registerLazySingleton(() => GetTopRatedMovies(sl()));
-  sl.registerLazySingleton(() => GetUpcomingMovies(sl()));
+  sl.registerLazySingleton(() => GetPopularMovies(sl<MovieRepository>()));
+  sl.registerLazySingleton(() => GetTopRatedMovies(sl<MovieRepository>()));
+  sl.registerLazySingleton(() => GetUpcomingMovies(sl<MovieRepository>()));
 
-  // Cubit
+  // MovieCubit
   sl.registerFactory(
     () => MovieCubit(
       sl<GetPopularMovies>(),
