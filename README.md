@@ -6,7 +6,7 @@ This is a simple Flutter App show list if movies from TMDB website
   - ✅ Cubit  --> ( As a state management )
   - ✅ Dio  --> ( For fetching data from API )
   - ✅ Dependency Injection  --> ( get_it )
-  - Network Connectivity  --> ( connectivity_plus )
+  - ✅ Network Connectivity  --> ( connectivity_plus )
   - Cache Data  --> ( Hive )
 
 
