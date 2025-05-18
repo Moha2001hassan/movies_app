@@ -10,6 +10,11 @@ This is a simple Flutter App show list if movies from TMDB website
   - Cache Data  --> ( Hive )
 
 
+## 📱 Screenshots
+<div>   
+  <img src="https://github.com/user-attachments/assets/134073c9-8c05-4d0c-a469-3c8e55114693" alt="Screenshot" width="250">
+  <img src="https://github.com/user-attachments/assets/350b611f-d206-411a-a349-3b8641afc09b" alt="Screenshot" width="250">
+</div>
 
 
 
