@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import '../models/movie_model.dart';
+import '../../models/movie_model.dart';
 
 class MovieRemoteDataSource {
   final Dio dio;
