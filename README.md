@@ -7,7 +7,8 @@ This is a simple Flutter App show list if movies from TMDB website
   - ✅ Dio  --> ( For fetching data from API )
   - ✅ Dependency Injection  --> ( get_it )
   - ✅ Network Connectivity  --> ( connectivity_plus )
-  - Cache Data  --> ( Hive )
+  - ✅ Cache Data  --> ( Hive )
+  - ✅ Cache Network Images  --> ( cached_network_image )
 
 
 ## 📱 Screenshots

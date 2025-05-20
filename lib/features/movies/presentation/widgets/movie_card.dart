@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/shared_widgets/custom_cached_img.dart';
 import '../../data/models/movie_model.dart';
 
 class MovieCard extends StatelessWidget {
@@ -21,21 +22,8 @@ class MovieCard extends StatelessWidget {
             height: 120,
             child: Row(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.network(
-                    "https://image.tmdb.org/t/p/w200${movie.posterPath}",
-                    fit: BoxFit.cover,
-                    width: 140,
-                    height: 120,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Icon(
-                        Icons.image,
-                        color: Colors.red,
-                        size: 50,
-                      );
-                    },
-                  ),
+                CustomCachedImage(
+                  img: "https://image.tmdb.org/t/p/w200${movie.posterPath}",
                 ),
                 Expanded(
                   child: Padding(
