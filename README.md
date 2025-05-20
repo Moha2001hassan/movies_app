@@ -27,22 +27,30 @@ lib/
 │   │   └── keys.dart              
 │   ├── di/
 │   │   └── service_locator.dart     
-│   └── network/
-│       └── dio_client.dart          
+│   ├── network/
+│   │   └── dio_client.dart
+│   └── shared_widgets/
+│       └── custom_cached_img.dart
 │
 ├── features/
 │   └── movies/
 │       ├── data/
-│       │   ├── models/
-│       │   │   └── movie_model.dart               
 │       │   ├── datasources/
-│       │   │   └── movie_remote_datasource.dart  
+│       │   │   ├── local/
+│       │   │   │   ├── movie_hive_model.dart
+│       │   │   │   ├── movie_hive_model.g.dart
+│       │   │   │   ├── movie_local_data.dart
+│       │   │   │   └── movie_local_data_impl.dart
+│       │   │   └── remote/
+│       │   │       └── movie_remote_data.dart
+│       │   ├── models/
+│       │   │   └── movie_model.dart
 │       │   └── repositories/
-│       │       └── movie_repository_impl.dart     
+│       │       └── movie_repo_impl.dart     
 │       │
 │       ├── domain/
 │       │   ├── entities/
-│       │   │   └── movie.dart                   
+│       │   │   └── movie_entity.dart                   
 │       │   ├── repositories/
 │       │   │   └── movie_repository.dart         
 │       │   └── usecases/
@@ -57,7 +65,8 @@ lib/
 │           ├── screens/
 │           │   └── movies_screen.dart               
 │           └── widgets/
-│               └── movie_card.dart                
+│               ├── movie_card.dart
+│               └── network_connection_bar.dart                
 │
 └── main.dart </code></pre>    
 
